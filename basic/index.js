@@ -90,3 +90,46 @@ document.getElementById("mySubmit").onclick = function(){
     console.log(typeof age2);
     document.getElementById("p4").textContent = `Your new age is ${age2}`;
 }
+
+
+// String Methods
+let userName = "     Dementus";
+let phoneNum = "480-450-2472";
+let test;
+
+test = userName.charAt(9);                  // Letter at x index
+test = userName.indexOf("e");               // Returns first occurance of a char
+test = userName.lastIndexOf("e");           // Returns last occurance
+test = userName.length;                     // Len of string
+userName = userName.trim();                 // Trims whitespace on f and b
+test = userName.toUpperCase();
+test = userName.toLowerCase();
+test = userName.repeat(3);                  // Repeats the string x times
+test = userName.startsWith("D");            // Returns bools if string starts with x char
+test = userName.endsWith(" ");              // Same but at the end of str
+test = userName.includes("x");              // Checks full string for x sub string or char
+test = phoneNum.replaceAll("-", "/");       // Replace one with another
+test = userName.trim();
+
+console.log(test);
+
+
+// String slicing
+const fullName = "John Doe";
+
+test = fullName.slice(0, 4);                 // Get first 4 char's
+test = fullName.slice(5, 8);                 // Get last name
+test = fullName.slice(0, 1);                 // Get's x char
+test = fullName.slice(-1);                   // Last char
+
+test = fullName.slice(0, fullName.indexOf(" "));    // Get everything from including till you hit a space
+test = fullName.slice(fullName.indexOf(" ") + 1);   // Get everything from the space to the endd
+
+console.log(test);
+
+// More slicing 
+const email2 = "JohnD@gmail.com";
+let uName = email2.slice(0, email2.indexOf("@"));
+let provider = email2.slice(email2.indexOf("@") + 1, email2.indexOf("."));
+
+console.log(`User: ${uName}, uses ${provider} for email.`);

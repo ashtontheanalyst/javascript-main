@@ -7,7 +7,7 @@ Holds all files for later reference with Java Script and HTML/CSS.
 Following [THIS](https://www.youtube.com/watch?v=lfmg-EJ8gm4) fundementals
 video from Bro Code as always. Very in-depth series with a lot of hand
 built projects showing off the skills and techniques learned.  
-**TIME:** 1:31:57
+**TIME:** 3:07:16
 
 ## Alias for Making Folder and Files:
 I got tired of having to click through and make a folder, then make each
@@ -26,3 +26,4 @@ mjs() {
 ## Notes:
 - Anything labeled with **P-** then the name, is a project. Meaning
 that it has more than just lessons, it's an actual thing to look at.
+- Extremely similar to c/python it seems in terms of fundementals and etc.

@@ -32,6 +32,13 @@ else {
 }
 
 
+// Strict operator === or !== means it has to match in data type and value
+const PI = 3.14;
+
+PI === "3.14" ? console.log("That is Pi") : console.log("That is not PI");
+PI == "3.14" ? console.log("It's Pi by value") : console.log("It's not Pi at all");
+
+
 // If statement ut updating the page
 const input = document.getElementById("myText");
 const submit = document.getElementById("mySubmit");
@@ -49,6 +56,10 @@ submit.onclick = function(){
     else {
         result.textContent = `You're too young!`;
     }
+
+    /* TERNARY OPERATOR
+    result.textContent = age2 >= 21 ? `You're old enough to drink` : `You're too young!`;
+    */
 }
 
 
@@ -84,3 +95,64 @@ mySubmit2.onclick = function() {
         paymentResult.textContent = `Select a form of payment`;
     }
 }
+
+
+// Switches
+let day = 7;
+
+switch (day) {
+    case 1:
+        console.log(`It's day ${day} of 7`);
+        break;
+    case 2:
+        console.log(`It's day ${day} of 7`);
+        break;
+    case 3:
+        console.log(`It's day ${day} of 7`);
+        break;
+    case 4:
+        console.log(`It's day ${day} of 7`);
+        break;
+    case 5:
+        console.log(`It's day ${day} of 7`);
+        break;
+    case 6:
+        console.log(`It's day ${day} of 7`);
+        break;
+    case 7:
+        console.log(`It's day ${day} of 7`);
+        break;
+    // Default allows us to break out of the switch if none of the cases are met
+    default:
+        console.log(`That's not a day of the week`);
+        break;
+}
+
+
+// Another switch ex.
+let testScore = 130;
+let letterGrade;
+
+switch (true) {
+    case testScore > 100:
+        letterGrade = "NaN";
+        break;
+    case testScore >= 90:
+        letterGrade = "A";
+        break;
+    case testScore >= 80:
+        letterGrade = "B";
+        break;
+    case testScore >= 70:
+        letterGrade = "C";
+        break;
+    case testScore >= 60:
+        letterGrade = "D";
+        break;
+    case testScore < 60:
+        letterGrade = "F";
+        break;
+    default:
+        letterGrade = "NaN";
+}
+console.log(`Your test score ${testScore} is a(n): ${letterGrade}`)
