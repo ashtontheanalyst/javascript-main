@@ -12,8 +12,27 @@
     <button type="submit" id="mySubmit">Submit</button><br>
 
     <p id="result"></p>
-    
 
+
+    <!-- Checkbox -->
+    <input type="checkbox" id="myCheckbox">
+    <label for="myCheckbox">Subscribe</label><br><br>
+
+    <!-- Radio buttons, they're indivudal until you group them with
+     the name tag, then it'll only let you pick one in the group -->
+    <input type="radio" id="visaBtn" name="card">
+    <label for="visaBtn">Visa</label><br>
+    <input type="radio" id="masterBtn" name="card">
+    <label for="masterBtn">MasterCard</label><br>
+    <input type="radio" id="paypalBtn" name="card">
+    <label for="paypalBtn">PayPal</label><br>
+
+    <button type="submit" id="mySubmit2" class="submitBtn">Submit</button>
+
+    <p id="subResult"></p>
+    <p id="paymentResult"></p>
+    
+    
     <script src="index.js"></script> <!--JS-->
 </body>
 </html>

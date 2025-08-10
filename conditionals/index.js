@@ -50,3 +50,37 @@ submit.onclick = function(){
         result.textContent = `You're too young!`;
     }
 }
+
+
+// This is for working with check boxes and radio buttons
+const myCheckbox = document.getElementById("myCheckbox");
+const visaBtn = document.getElementById("visaBtn");
+const masterBtn = document.getElementById("masterBtn");
+const paypalBtn = document.getElementById("paypalBtn");
+const mySubmit2 = document.getElementById("mySubmit2");
+const subResult = document.getElementById("subResult");
+const paymentResult = document.getElementById("paymentResult");
+
+mySubmit2.onclick = function() {
+    // Checked evaluates to TRUE or FALSE
+    if (myCheckbox.checked) {
+        subResult.textContent = `You are Subscribed!`;
+    }
+    else {
+        subResult.textContent = `You aren't Subscribed...`;
+    }
+
+    // Same but for radio buttons
+    if (visaBtn.checked) {
+        paymentResult.textContent = `Using Visa`;
+    }
+    else if (masterBtn.checked) {
+        paymentResult.textContent = `Using Master Card`;
+    }
+    else if (paypalBtn.checked) {
+        paymentResult.textContent = `Using PayPal`;
+    }
+    else {
+        paymentResult.textContent = `Select a form of payment`;
+    }
+}
