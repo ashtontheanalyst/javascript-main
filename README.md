@@ -7,7 +7,12 @@ Holds all files for later reference with Java Script and HTML/CSS.
 Following [THIS](https://www.youtube.com/watch?v=lfmg-EJ8gm4) fundementals
 video from Bro Code as always. Very in-depth series with a lot of hand
 built projects showing off the skills and techniques learned.  
-**TIME:** 3:07:16
+**TIME:** 3:36:28
+
+## Topics to Learn:
+[THIS](https://www.youtube.com/watch?v=37vxWr0WgQk) video talks about using JS
+with API's and JSON data. This would be super helpful to learn given the nature
+of the projects at work utilize this type of tech.
 
 ## Alias for Making Folder and Files:
 I got tired of having to click through and make a folder, then make each
@@ -27,3 +32,4 @@ mjs() {
 - Anything labeled with **P-** then the name, is a project. Meaning
 that it has more than just lessons, it's an actual thing to look at.
 - Extremely similar to c/python it seems in terms of fundementals and etc.
+- To make an emoji appear in text on Windows, click "Windows + ;" then choose.

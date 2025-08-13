@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp Converter</title>
+    <link rel="stylesheet" href="style.css"> <!--CSS-->
+</head>
+<body>
+    <form>
+        <h1>Temperature Conversion:</h1>
+        <!-- type=number makes it a # input box with up and down arrows to adjust num, default is 0-->
+        <input type="number" id="textBox" value="0"><br>
+
+        <input type="radio" id="toFahrenheit" name="unit">
+        <label for="toFahrenheit">Celsius to Fahrenheit</label><br>
+
+        <input type="radio" id="toCelsius" name="unit">
+        <label for="toCelsius">Fahrenheit to Celsius</label><br>
+
+        <!--When the submit btn is clicked, it performs the convert function in JS file-->
+        <button type="button" onclick="convert()">submit</button><br>
+        <p id="result">Select a unit</p>
+    </form>
+    
+
+    <script src="index.js"></script> <!--JS-->
+</body>
+</html>

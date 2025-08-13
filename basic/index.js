@@ -133,3 +133,57 @@ let uName = email2.slice(0, email2.indexOf("@"));
 let provider = email2.slice(email2.indexOf("@") + 1, email2.indexOf("."));
 
 console.log(`User: ${uName}, uses ${provider} for email.`);
+
+
+// Array
+let fruits = ["apple", "banana", "orange"];
+console.log(fruits);                          // Pure array output
+console.log(fruits[0]);                       // Prints the index value in arry
+fruits[0] = "strawberry";                     // Changes the value of indexed item
+fruits.push("coconut");                       // Add a value onto the end
+fruits.pop();                                 // Removes the value from the end
+fruits.unshift("mango");                      // Inserts a value at the beg. of the array
+fruits.shift();                               // Removes the first indexed value
+
+test = fruits.length;                         // Amount of values
+test = fruits.indexOf("banana");              // Search for value, return index, -1 means not found
+console.log(test);
+
+// Print out values using a C++ for loop
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+
+fruits.sort()                                 // Sort in alpha
+fruits.sort().reverse()
+
+// Shortcut, for loop like Python
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+
+
+// Spread Operator (...), allows an interable like string or array to be separated/unpacked
+let numbers = [1, 2, 3, 4, 5];
+
+/* This will not work, you need the spread op
+let max = Math.max(numbers)
+console.log(max); */
+
+let max = Math.max(...numbers);
+let min = Math.min(...numbers);
+console.log(max, min);
+
+// Splits the original string into a char array, puts it one char at a time like C-string
+let user = "Jane Jefferon";
+let letters = [...user];
+// let letters = [...user].join("-")            // This would break the numbers up, but join them back together with a - inbetween each
+console.log(letters);
+
+// Combining arrays
+let meat = ["beef", "chicken", "pork"];
+let cheese = ["american", "swiss", "pepper jack"];
+
+// We make a new array with the values of the ones above and add some outside values in too
+let foods = [...meat, "bread", ...cheese, "milk", "ketchup"];
+console.log(foods);

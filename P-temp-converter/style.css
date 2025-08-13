@@ -1,0 +1,57 @@
+body{
+    font-family: helvetica;
+    background-color: hsl(0, 5%, 90%);
+}
+
+h1{
+    color: hsl(223, 100%, 64%);
+}
+
+form{
+    background-color: white;
+    text-align: center;
+    max-width: 350px;
+    /*This aligns the 350px object in the center of the page*/
+    margin: auto;
+    /*Padding can take two values, one for padding on top/bottom, the second for R/L*/
+    padding: 25px;
+    border-radius: 10px;
+    /*Shadow is 5px to the right, 5px down, that color, with 30% transparency*/
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#textBox{
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+label{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+button{
+    margin-top: 15px;
+    background-color: hsl(0, 90%, 40%);
+    font-size: 1.5em;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    /*When you hover over the button it turns into a clicker*/
+    cursor: pointer;
+}
+
+/*Changes what the button does on hover*/
+button:hover{
+    background-color:  hsl(0, 90%, 28%);
+}
+
+#result{
+    font-size: 1.75em;
+    font-weight: bold;
+}
