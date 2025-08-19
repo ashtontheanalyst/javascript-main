@@ -65,3 +65,49 @@ openFridge(food1, food2, food3, food4);
 console.log(...makeArray("apple", "banana", "strawberry"));
 // Gets the sum of the values then output
 console.log(`The sum is: ${sum(1, 8, 99, 120)}`);
+
+
+// Callback - a function that is passed as an argument to another function
+// Typically for reading a file, network requests, interacting with db, etc.
+
+/* This ex mimics a function taking a long time, notice the goodBye function goes first
+but we can fix it using the callback below. We pass goodbye to hello, then once everything in
+hello has processed, it'll call the goodbye function
+function hello() {
+    setTimeout(function () {
+        console.log("Hello!");
+    }, 3000)
+}
+
+function goodbye() {
+    console.log("Goodbye...");
+}
+
+hello();
+goodbye();
+*/
+
+function hello(callback) {
+    console.log("Hello!");
+
+    // Wait for the rest of the function to be done, then call next function
+    callback();
+}
+
+function goodbye() {
+    console.log("goodbye...");
+}
+
+hello(goodbye);
+
+// Another callback function but with arguments and shows on HTML
+adding(displayPage, 3, 10);
+
+function adding(callback2, x, y) {
+    let result = x + y;
+    callback2(result);
+}
+
+function displayPage(result){
+    document.getElementById("myH1").textContent = result;
+}

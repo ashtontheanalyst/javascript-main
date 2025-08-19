@@ -1,0 +1,35 @@
+#container{
+    font-family: Helvetica;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+button{
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(225, 75%, 70%);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(225, 75%, 55%);
+    transition: 0.1s;
+}
+
+/*This is what happens when the button is CLICKED*/
+button:active{
+    background-color: hsl(225, 75%, 65%);
+}
+
+/*Styles the input box*/
+input{
+    font-size: 2rem;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
