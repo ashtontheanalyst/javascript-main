@@ -111,3 +111,53 @@ function adding(callback2, x, y) {
 function displayPage(result){
     document.getElementById("myH1").textContent = result;
 }
+
+
+// .forEach() is used to iterate over an array and apply a function to it
+let numbers = [1, 2, 3, 4, 5];
+
+// Another example, doubling the values in the array individually
+numbers.forEach(double);
+// Accesses each value in the array then passes it to the display function
+numbers.forEach(display);
+
+// By default these param.'s are passed thanks to the forEach function, doubles the value of index
+function double(element, index, array) {
+    array[index] = element * 2;
+}
+
+function display(element) {
+    console.log(element);
+}
+
+
+// .map(), returns a new array that under goes the callback function, similar to .foreach()
+const numbers2 = [1, 2, 3, 4, 5];
+
+// New array made containing squared values from 'numbers2'
+const squares = numbers.map(squared);
+
+function squared(element) {
+    return Math.pow(element, 2);
+}
+
+function display2(element) {
+    console.log(element);
+}
+
+squares.forEach(display2);
+
+// Another ex of .map()
+const dates = ["2024-1-10", "2025-2-20", "2026-3-30"];
+
+// New array with formatted dates from 'dates', displayed using the pre made function from above
+const formattedDates = dates.map(formalDates);
+formattedDates.forEach(display);
+
+// Callback function that changes the date to be standard
+function formalDates(element) {
+    // Split the array into a new array filled with the m, d, yr
+    const parts = element.split("-");
+
+    return `${parts[1]}/${parts[2]}/${parts[0]}`;
+}

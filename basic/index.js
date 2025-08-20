@@ -187,3 +187,56 @@ let cheese = ["american", "swiss", "pepper jack"];
 // We make a new array with the values of the ones above and add some outside values in too
 let foods = [...meat, "bread", ...cheese, "milk", "ketchup"];
 console.log(foods);
+
+
+// .filter() creates a new array by filtering out elements
+numbers = [1, 2, 3, 4, 5, 6];
+// If true is returned, the number will be added to this array, then we console log below
+let evenNums = numbers.filter(isEven);
+let oddNums = numbers.filter(isOdd);
+
+console.log(evenNums, oddNums);
+
+function isEven(element) {
+    // Returns true if there's no remainder, false if odd
+    return element % 2 === 0;
+}
+
+// Checks for odds
+function isOdd(element) {
+    return element % 2 !== 0;
+}
+
+// Another .filter() function
+let ages = [13, 14, 15, 16, 17, 18, 19, 20, 21];
+let adult = ages.filter(above17);
+
+console.log(adult);
+
+function above17(element) {
+    return element > 17;
+}
+
+
+// .reduce() reduces the elements of an array to a single value
+const prices = [5, 40, 7, 23, 12];
+const total = prices.reduce(sumPrices);
+
+console.log(`$${total}.00 is your total`);
+
+// .reduce() needs to param.'s, the previous value (first time it starts as 0), then
+// the current element. Think of adding on to itself until it's through the array
+function sumPrices(prevElement, element){
+    return prevElement + element;
+}
+
+// Aother .reduce() ex, this time comparing the prev grade to current and storing the max
+const grades = [80, 72, 32, 91, 67];
+const max2 = grades.reduce(getMax);
+
+console.log(`${max2} is the highest grade!`);
+
+// Keeps looping through the array and comparing, stores the true max, think "king of the hill"
+function getMax(prevE, element) {
+    return Math.max(prevE, element);
+}
