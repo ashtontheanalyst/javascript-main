@@ -161,3 +161,61 @@ function formalDates(element) {
 
     return `${parts[1]}/${parts[2]}/${parts[0]}`;
 }
+
+// This is a function expression, defines a function as a variables
+// This way we can pass a function to another function in the form of a param. variable
+// It can be useful because it cleans up some lines of code but I like declaring more...
+const example2 = function() {
+    console.log("This function is stored as a variable");
+}
+example2();
+
+// Compare to normal function declaration
+function example() {
+    console.log("This is a regular function");
+}
+example();
+
+
+// setTimeout function will invoke a function after x milliseconds, 1000 milli is 1 sec
+setTimeout(example2, 2000);
+
+// setTimeout function but we declare the function variable inside the param.
+setTimeout(function(){
+    console.log("This function is declared inside setTimeout()");
+}, 4000);
+
+// Another function expression ex. We use the map function firstly to create a new array
+// that cubes each value from 'numbers' and stores it in evenCubes. Then each value in
+// evenCubes is checked to see if it's even, if not then it's removed.
+numbers = [1, 2, 3, 4, 5, 6];
+
+const evenCubes = numbers.map(function (element) {
+    return Math.pow(element, 3);
+}).filter(function (element) {
+    return element % 2 === 0 ? true : false;
+});
+
+console.log(...evenCubes);
+
+
+// Arrow functions, a concise way to write a function, generally for small func's
+// Format: function expression: name = (param's) => code inside the function block
+const helloArrow = () => console.log("Hello Arrow function with no param's");
+const helloName = (name) => console.log(`Hello ${name}`);
+const helloNA = (name, age) => {console.log(`Your name is ${name}`)
+                                console.log(`You're ${age} years old`)}
+
+helloArrow();
+helloName("John");
+helloNA("Adam", 21);
+
+// Arrow function as a callback in setTimeout(). After three sec's do the arrow func.
+setTimeout(() => console.log("Arrow function in setTimeout()"), 3000);
+
+// Another arrow funciton, first thing we do is use the map function to make a new array
+// of values from 'numbers' quaded. Then we use .reduce to get the sum of those values and store it
+numbers = [1, 2, 3, 4, 5, 6];
+const totalQuads = numbers.map((element) => Math.pow(element, 4))
+                          .reduce((prevElement, element) => prevElement + element);
+console.log(totalQuads);
