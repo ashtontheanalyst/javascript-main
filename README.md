@@ -7,7 +7,7 @@ Holds all files for later reference with Java Script and HTML/CSS.
 Following [THIS](https://www.youtube.com/watch?v=lfmg-EJ8gm4) fundementals
 video from Bro Code as always. Very in-depth series with a lot of hand
 built projects showing off the skills and techniques learned.  
-**TIME:** 4:45:21
+**TIME:** 6:01:50
 
 ## Topics to Learn:
 [THIS](https://www.youtube.com/watch?v=37vxWr0WgQk) video talks about using JS
