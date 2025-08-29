@@ -1,0 +1,31 @@
+body{
+    /*Make the background an image*/
+    background-image: url(kyleField.jpg);
+    background-position: center;
+    /*This property allows the image to stretch with the screen and look nice*/
+    background-size: cover;
+    /*If you have a page that scrolls, this would lock the background image in place, the page contents move indepenetly*/                
+    background-attachment: fixed;
+    margin: 0;
+}
+
+#clockContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;                  /*Take up 100% of the view port (screen*/
+}
+
+#clock{
+    font-family: monospace;
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    /*This adds a blue as the background of this div element*/
+    backdrop-filter: blur(2px);
+    /*This adds some grey into the blur to make it look glassy*/
+    background-color: hsl(0, 0%, 100%, 0.1);
+    width: 50rem;
+    border-radius: 20px;
+}

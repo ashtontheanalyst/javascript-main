@@ -240,3 +240,36 @@ console.log(`${max2} is the highest grade!`);
 function getMax(prevE, element) {
     return Math.max(prevE, element);
 }
+
+
+// Date objects, helps us to get date and time in an object, we can further mess with it to look nice
+const date = new Date();    // This is the current date
+console.log(date);
+
+// Date constructor: Date(year, month, day, hour, minute, second, ms)
+// EX: January 1, 2024, 2AM 3 minutes, 4 seconds, 5 milliseconds
+const date2 = new Date(2024, 0, 1, 2, 3, 4, 5);
+console.log(date2);
+
+// You can also pass in a string
+const date3 = new Date("2024-01-02T12:00:00Z");
+console.log(date3);
+
+// You can pass in the amount of milliseconds since the beginning of computer time:
+const date4 = new Date(0);
+console.log(`This is the epic date: ${date4}`);
+
+// Accessing specifics from the date object once it's made
+const year = date.getFullYear();
+const month = date.getMonth();
+const day = date.getDate();
+const dayName = date.getDay();          // This returns a number so you write a switch/case for the NAME of the week
+
+console.log(`The date is: ${dayName} ${month}/${day}/${year}`);
+
+// More, but we use some padding for the numbers to give it that digital look
+const hour = date.getHours().toString().padStart(2, 0);
+const minute = date.getMinutes().toString().padStart(2, 0);
+const second = date.getSeconds().toString().padStart(2, 0);
+
+console.log(`The time is: ${hour}:${minute}:${second}`);

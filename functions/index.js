@@ -249,3 +249,58 @@ function clearTimer() {
     clearTimeout(timeoutId);
     console.log("CLEARED");
 }
+
+
+// setInterval() is super useful because it calls the callback function every x seconds
+function sayBye() {
+    console.log("Bye Bye!");
+}
+
+setInterval(sayBye, 1000);
+
+
+// Closure is a function defined inside of another function, the inner has access to the vars
+// and methods of the outer function. Used in frameworks a lot.
+function outer() {
+    let message = "testing inner function from outer";
+
+    // inner() has access to the things inside of outer, but not the other way around
+    function inner() {
+        console.log(message);
+    }
+
+    // You then have to call it to make it happen
+    inner();
+}
+
+outer();
+
+// Another ex but looking at how to keep a variable private/ maintain it's state securely
+function createCounter() {  
+    let count = 0;  
+    
+    function increment() {
+        count++;
+        console.log(`Count increased to ${count}`);
+    }
+
+    function getCount() {
+        return count;
+    }
+
+    // Return an object from createCounter, with a method (function) of increment and getCount
+    return {increment, getCount};
+}
+
+// A blank object gets returned from calling createCounter but it has a count of 0 and the increment method
+const counter = createCounter();
+
+counter.increment();
+counter.increment();
+counter.increment();
+
+// Notice how the count variable is hidden, we need to make a function since it's hidden
+console.log(counter.count);
+
+// We made the getCount method to now see the 'hidden' var
+console.log(counter.getCount());

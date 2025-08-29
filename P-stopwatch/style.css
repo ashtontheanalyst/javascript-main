@@ -1,0 +1,75 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 85%);
+}
+
+#myH1{
+    font-size: 4em;
+    font-family: Arial;
+    color: hsl(0, 0%, 0%);
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 5px solid hsl(0, 0%, 25%);
+    border-radius: 20px;
+    background-color: white;
+}
+
+#display{
+    font-size: 5em;
+    font-family: monospace;
+    /*Shadow for the text, 2px to the right, 2px down, and 2 px thick*/
+    text-shadow: 2px 2px 2px;
+    color: hsl(0, 0%, 25%);
+    margin-bottom: 25px;
+}
+
+/*This lets you allow specific elements in the id'd element
+so we can now control all buttons solely in the controls div*/
+#controls button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#startBtn{
+    background-color: hsl(120, 50%, 65%);
+    color: hsl(120, 50%, 25%);
+}
+
+#startBtn:hover{
+    background-color: hsl(120, 50%, 25%);
+    color: hsl(120, 50%, 65%);
+}
+
+#stopBtn{
+    background-color: hsl(0, 50%, 65%);
+    color: hsl(0, 50%, 25%);
+}
+
+#stopBtn:hover{
+    background-color: hsl(0, 50%, 25%);
+    color: hsl(0, 50%, 65%);;
+}
+
+#resetBtn{
+    background-color: hsl(195, 50%, 65%);
+    color: hsl(195, 50%, 25%);
+}
+
+#resetBtn:hover{
+    background-color: hsl(195, 50%, 25%);
+    color: hsl(195, 50%, 65%);
+}
