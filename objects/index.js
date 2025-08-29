@@ -368,3 +368,60 @@ console.log(person.age);
 
 // This is a separate getter we made, combines values
 console.log(person.fullName);
+
+
+// Destructuring extracts values from arrays and objects then assigns them to variables convinently
+// [] for array destruc. and {} for object destruc.
+let a = 1;
+let b = 2;
+
+// This swaps the values of a and b, the right hand of the = is destructuring it makes a new array then reassigns
+[a, b] = [b, a];
+
+console.log(a, b);
+
+// Another ex
+const colors = ["red", "green", "blue", "black", "white"];
+
+// Swapping the 0 and 4 indexed values
+[colors[0], colors[4]] = [colors[4], colors[0]]
+console.log(...colors);
+
+// Using colors still, assign some variables with the values from the colors array
+const [fColor, sColor, tColor, ...extraColors] = colors;
+console.log(fColor, sColor, tColor, extraColors);
+
+
+// Now we do Destructuring with an objetc
+const char1 = {
+    fName: "Spongebob",
+    lName: "Squarepants",
+    age: 30,
+    job: "Fry Cook"
+}
+
+const char2 = {
+    fName: "Patrick",
+    lName: "Star",
+    age: 42,
+}
+
+/* Destructuring from an object, this is the basic normal way
+const {fName, lName, age, job} = char1;
+console.log(fName, lName, age, job);
+*/
+
+// This is setting a default value to the destructuring in case of like in char 2 where patirck has no job property
+const {fName, lName, age, job="Unemployed"} = char2;
+console.log(fName, lName, age, job);
+
+
+// The function takes in the object and destructures it so that we can access values
+// The destructured values need to line up with the variables from the class
+function displayChar({fName, lName, age, job}) {
+    console.log(`${fName} ${lName} is ${age}`);
+    console.log(`Their job is: ${job}`);
+}
+
+// This is passign an entire OBJECT into a function
+displayChar(char2);

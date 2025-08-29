@@ -219,3 +219,33 @@ numbers = [1, 2, 3, 4, 5, 6];
 const totalQuads = numbers.map((element) => Math.pow(element, 4))
                           .reduce((prevElement, element) => prevElement + element);
 console.log(totalQuads);
+
+
+// setTimeout() function, this is an ansync function, it allows you to run a function after x millisec from runtime
+function sayHello() {
+    window.alert("Hello");
+}
+
+setTimeout(sayHello, 3000);
+
+// Another ex with an anonymous function
+setTimeout(function() {console.log("Works with an anonymous func too")}, 4000);
+
+// Works with an arrow function too
+setTimeout(() => {console.log("Works with an arrow func too")}, 4500);
+
+
+// clearTimeout is in the same family as setTimeout(), cancels a timeout before it triggers
+let timeoutId;
+
+// This function triggers when we click the button on screen, wait 4 sec from a window to pop up
+function startTimer() {
+    timeoutId = setTimeout(() => {window.alert("What's up from clearTimeout")}, 4000);
+    console.log("STARTED");
+}
+
+// If we click this button on screen it will cancel the above function if we do it before 3 seconds
+function clearTimer() {
+    clearTimeout(timeoutId);
+    console.log("CLEARED");
+}
