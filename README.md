@@ -7,7 +7,7 @@ Holds all files for later reference with Java Script and HTML/CSS.
 Following [THIS](https://www.youtube.com/watch?v=lfmg-EJ8gm4) fundementals
 video from Bro Code as always. Very in-depth series with a lot of hand
 built projects showing off the skills and techniques learned.  
-**TIME:** 8:05:29, middle of Calc app funcitonality
+**TIME:** 8:14:34, middle of Calc app funcitonality
 - Skipped over 6:10:08 to 6:40:08
 
 ## Topics to Learn:
