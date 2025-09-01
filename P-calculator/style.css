@@ -1,0 +1,69 @@
+body{
+    /*Vertically and Horizontally align the body of our calc in the center of the screen*/
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 95%);
+}
+
+#calculator{
+    font-family: arial;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+#display{
+    width: 100%;
+    padding: 20px;
+    font-size: 5em;
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+}
+
+/*This is the div element that contains all the keys*/
+#keys{
+    display: grid;
+    /*This makes a grid of 4 columns, 1fr means they all take up the same amount of space*/
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+
+/*This is what happens when you click on the button*/
+button:active{
+    background-color: hsl(0, 0%, 50%);
+}
+
+.operatorBtn{
+    background-color: hsl(35, 100%, 55%);
+}
+
+.operatorBtn:hover{
+    background-color: hsl(35, 100%, 65%);
+}
+
+.operatorBtn:active{
+    background-color: hsl(35, 100%, 75%);
+}
