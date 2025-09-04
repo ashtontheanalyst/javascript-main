@@ -164,3 +164,62 @@ for (let name of names) {
     newListItem.textContent = name;
     document.getElementById("newList").append(newListItem);
 }
+
+
+// eventListener listens for specific events on screen to make interactive pages
+const myBox = document.getElementById("myBox");
+
+// This is the callback function, the event is provided by the browser, shows the most recent event
+function changeColor(event) {
+    // The target is the div box we made, when you click on it, we turn it's background white
+    event.target.style.backgroundColor = "white";
+    event.target.textContent = "HEY! 😊";
+}
+
+// When we click on the box, call the callback function
+myBox.addEventListener("click", changeColor);
+
+
+// This is another way to do it with an anonymous function
+myBox.addEventListener("click", function(event) {
+    if (event.target.style.backgroundColor == "white") {
+        event.target.style.backgroundColor = "lightblue";
+        event.target.textContent = "Cool Beans 👌";
+    }
+});
+
+// This is using an arrow function
+myBox.addEventListener("click", (event) => {
+    if (event.target.style.backgroundColor == "lightblue") {
+        event.target.style.backgroundColor = "green";
+        event.target.textContent = "Gross!! 🤮";
+    }
+});
+
+
+// This is using eventListener but instead of waiting for a click, it's on hover or mouseover
+myBox.addEventListener("mouseover", (event) => {
+    event.target.style.backgroundColor = "yellow";
+    event.target.textContent = "Don't Do It ⚠️";
+});
+
+// mouseout is for when you leave an element, leave the boundaries of the box
+myBox.addEventListener("mouseout", (event) => {
+    event.target.style.backgroundColor = "lightcoral";
+    event.target.textContent = "Click Me!😂";
+});
+
+// Adding a button in the mix
+const myBtn = document.getElementById("myBtn");
+
+// Change the div box to stuff when we click the button down
+myBtn.addEventListener("mousedown", (event) => {
+    myBox.style.backgroundColor = "purple";
+    myBox.textContent = "CLICKED";
+});
+
+// When we let off the mouse click, go back to default
+myBtn.addEventListener("mouseup", (event) => {
+    myBox.style.backgroundColor = "lightcoral";
+    myBox.textContent = "Click Me!😂";
+});

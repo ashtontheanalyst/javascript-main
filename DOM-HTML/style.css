@@ -3,3 +3,18 @@
     width: 100%;
     height: 125px;
 }
+
+#myBox{
+    background-color: lightcoral;
+    width: 300px;
+    height: 300px;
+    font-size: 4em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#myBtn{
+    font-size: 3em;
+}
